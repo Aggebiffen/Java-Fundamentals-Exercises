@@ -10,6 +10,7 @@ public class Main {
         exercise_4();
         exercise_5();
         exercise_6();
+        exercise_7();
     }
 
     public static void exercise_1() {
@@ -81,6 +82,21 @@ public class Main {
         System.out.println("division: " + division);
         System.out.println("subtraction: " + subtraction);
     }
+    public static void exercise_7(){
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Input seconds: ");
+        int seconds = in.nextInt();
+
+        int s = seconds % 60;
+        int m = seconds / 60;
+        int h = m / 60;
+        m = s%60;
+
+        System.out.println(h + ":" + m + ":" + s);
+
+    }
+
 
 
 }
