@@ -19,15 +19,22 @@ public class Main {
     }
 
     public static void exercise_2() {
-        int year = 2024;
-        boolean x = (year % 4) == 0;
-        boolean y = (year % 100) != 0;
-        boolean z = (year % 400 == 0);
+        Scanner in = new Scanner(System.in);
+        System.out.println("Input the year: ");
+        int year = in.nextInt();
 
-        if (x && (y || z)) {
-            System.out.printf(year + " is a leap year");
-        } else
-            System.out.printf(year + " is not a leap year");
+        boolean x = (year % 4 == 0);
+        boolean y = (year % 100 != 0);
+        boolean z = (year % 100 == 0) && (year % 400 ==0);
+
+        if (x &&(y || z))
+        {
+            System.out.println(year + " is a leap year");
+        }
+        else
+        {
+            System.out.println(year + " is not a leap year");
+        }
     }
 
     public static void exercise_3() {
